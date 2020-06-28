@@ -1,0 +1,24 @@
+﻿@page "/report"
+
+@inject HttpClient Http
+@inject IJSRuntime JS 
+@inject ExcelDataService service
+
+<h3>Report</h3>
+<input @bind-value="count" />
+<button class="btn btn-primary" @onclick="DownloadFile">Download</button>
+
+@code {
+    int count = 100;
+    async Task DownloadFile()
+    {
+        Console.WriteLine(DateTimeOffset.Now);
+        using (var package = new ExcelPackage())
+        {
+            var worksheet = package.Workbook.Worksheets.Add("Test");
+            var tableBody = worksheet.Cells["A1:A1"].LoadFromCollection(service.GetExcelDatas(count), true);
+            await JS.SaveAs("Test.xlsx", await package.GetAsByteArrayAsync());
+        }
+        Console.WriteLine(DateTimeOffset.Now);
+    }
+}
