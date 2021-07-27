@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets 
+  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>XUnit Test</Title>
+      <Shortcut>xfact</Shortcut>
+      <Description>Code snippet for a fact method</Description>
+      <Author></Author>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Xunit</Namespace>
+        </Import>
+      </Imports>
+      <References>
+        <Reference>
+          <Assembly></Assembly>
+        </Reference>
+      </References>
+      <Declarations>
+        <Literal>
+          <ID>UnitOfWork</ID>
+          <ToolTip>Unit Of Work</ToolTip>
+          <Default>UnitOfWork</Default>
+        </Literal>
+        <Literal>
+          <ID>StateUnderTest</ID>
+          <ToolTip>State Under Test</ToolTip>
+          <Default>StateUnderTest</Default>
+        </Literal>
+        <Literal>
+          <ID>ExpectedBehavior</ID>
+          <ToolTip>Expected Behavior</ToolTip>
+          <Default>ExpectedBehavior</Default>
+        </Literal>
+        <Literal Editable="false">
+          <ID>FactMethod</ID>
+          <Function>SimpleTypeName(global::Xunit.Fact)</Function>
+        </Literal>
+        <Literal>
+          <ID>end</ID>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[$FactMethod$]
+      public void $UnitOfWork$_$StateUnderTest$_$ExpectedBehavior$()
+      {
+          //Arrange
+          $end$
+        
+          //Act
+        
+        
+        
+          //Assert
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>XUnit Theory</Title>
+      <Shortcut>xtheory</Shortcut>
+      <Description>Code snippet for an XUnit theory method</Description>
+      <Author></Author>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>XUnit</Namespace>
+        </Import>
+      </Imports>
+      <References>
+        <Reference>
+          <Assembly></Assembly>
+        </Reference>
+      </References>
+      <Declarations>
+        <Literal>
+          <ID>UnitOfWork</ID>
+          <ToolTip>Unit Of Work</ToolTip>
+          <Default>UnitOfWork</Default>
+        </Literal>
+        <Literal>
+          <ID>StateUnderTest</ID>
+          <ToolTip>State Under Test</ToolTip>
+          <Default>StateUnderTest</Default>
+        </Literal>
+        <Literal>
+          <ID>ExpectedBehavior</ID>
+          <ToolTip>Expected Behavior</ToolTip>
+          <Default>ExpectedBehavior</Default>
+        </Literal>
+        <Literal Editable="false">
+          <ID>TheoryMethod</ID>
+          <Function>SimpleTypeName(global::Xunit.Theory)</Function>
+        </Literal>
+         <Literal>
+          <ID>end</ID>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[$TheoryMethod$]
+      public void $UnitOfWork$_$StateUnderTest$_$ExpectedBehavior$()
+      {
+          //Arrange
+          $end$
+        
+          //Act
+        
+        
+        
+          //Assert
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
